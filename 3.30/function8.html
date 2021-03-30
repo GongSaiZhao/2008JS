@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //值传递 与 引用传递
+        function test1(num) {
+            return num++ ///结果还是111
+        }
+        var a = 111;
+        test1(a)
+        console.log(a); ///结果1111
+    </script>
+
+</body>
+
+</html>

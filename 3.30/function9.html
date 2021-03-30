@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //引用传递
+        var obj = {
+                num: 111
+            } //对象自变量
+
+        // console.log(obj);
+        function test1(o) {
+            o.name = "xiao diao"
+        }
+        test1(obj);
+        console.log(obj);
+    </script>
+</body>
+
+</html>
