@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person() {
+
+        }
+
+        Person.prototype.name = "小刁";
+        Person.prototype.age = 1
+
+
+
+        function Asian() {
+
+        }
+
+        Asian.prototype = new Person()
+        Asian.prototype.location = "亚洲"
+
+        var p1 = new Asian();
+        console.log(p1);
+        console.log(p1.location);
+        console.log(p1.name);
+        console.log(p1.age);
+
+
+        function China() {
+
+        }
+
+        China.prototype = new Asian();
+        China.prototype.color = "红色"
+
+        var p2 = new China();
+        console.log(p2);
+
+        // China.prototype = new Asian()
+
+        // Asian.prototype.location = "Asia";
+
+        // Asian.prototype = new Person()
+
+
+
+        // var p1 = new Asian()
+        //     // console.log(p1);
+
+        // var p2 = new China()
+        // console.log(p2);
+        // console.log(p2.location);
+        // console.log(p2.name);
+        // console.log(p2.age);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj1 = new Object();
+        console.log(Object.prototype);
+        console.log(obj1);
+
+        // console.log(obj1.__proto__ === Object.prototype);
+
+        var proto1 = Object.getPrototypeOf(obj1)
+        console.log(typeof proto1);
+        console.log(proto1);
+
+        console.log(proto1 === Object.prototype);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var calc = {
+            //加
+            add: function(a, b) {
+                console.log(a + b)
+                return a + b
+            },
+
+            //减
+            minus: function(a, b) {
+                console.log(a - b)
+                return a - b
+            },
+
+            //成
+            multi: function(a, b) {
+                console.log(a * b)
+                return a * b
+            },
+
+            //除
+            divi: function(a, b) {
+                console.log(a / b)
+                return a / b
+            }
+        }
+
+
+        var a = 100
+        var b = 200
+        calc.add(a, b)
+        calc.minus(a, b)
+        calc.multi(a, b)
+        calc.divi(a, b)
+    </script>
+</body>
+
+</html>
