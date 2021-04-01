@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="AAA">
+    <input type="button" value="BBB">
+    <input type="button" value="CCC">
+    <input type="button" value="DDD">
+    <input type="button" value="EEE">
+</body>
+
+</html>
+<script>
+    window.onload = function() {
+        var _li = document.querySelectorAll("input");
+        // console.log(_li);
+        let length = _li.length
+        for (let i = 0; i < length; i++) {
+            _li[i].index = i
+            _li[i].onclick = function() {
+                alert(this.index)
+            }
+        }
+    }
+</script>
