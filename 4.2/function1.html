@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * 箭头函数
+         */
+
+        let abb = function(a, b) {
+            return a + b
+        }
+        console.log(abb(11, 22));
+
+        // let add1 = (a, b) => {
+        //     return a + b
+        // }
+        // console.log(add1(55, 66));
+
+        // 两种方法：一种带{}但是必须return返回，规范的
+        //          一种不带{}直接返回
+
+        // let add1 = (a, b) => a + b
+        // console.log(add1(55, 66));
+
+        /*******************************************************************/
+
+        // function Hello() {
+
+        // }
+        // // let h = new Hello() //undefined
+        // console.log(h.name);
+
+        /**********************************************************************/
+
+        // function test2(a, b, ...args) { //rest 参数 
+        //     console.log(args);
+        // }
+        // test2(11, 12, 13, 14, 15, 16)
+
+        // function test1() {
+        //     console.log(arguments);
+        // }
+        // test1("小刁", "爱吃屎", "吃一斤")
+
+        /***************************************************************************/
+
+        // function foo({
+        //     x,
+        //     y = 5
+        // }) {
+        //     console.log(x, y);
+        // }
+        // // foo()   //x未找到
+        // // foo({}) //x 为undefined
+        // foo({
+        //     x: 1
+        // }); //1,5 x值为1
+
+
+        // function foo({
+        //     x,
+        //     y = 5
+        // }) {
+        //     console.log(x, y);
+        // }
+
+        // foo({}) // undefined 5
+        // foo({
+        //         x: 1
+        //     }) // 1 5
+        // foo({
+        //         x: 1,
+        //         y: 2
+        //     }) // 1 2
+        // foo() // TypeError: Cannot read property 'x' of undefined
+    </script>
+</body>
+
+</html>

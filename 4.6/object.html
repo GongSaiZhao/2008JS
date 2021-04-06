@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * 属性简写
+         */
+        // let name = "小刁"
+        // let age = 22
+        // let say = () => {
+        //     return "Hello Es6"
+        // }
+
+        // let obj3 = {
+        //     name,
+        //     age,
+        //     say
+        // }
+        // console.log(obj3);
+        // console.log(obj3.say());
+
+        /********************************************/
+
+
+        /**
+         * 方法简写
+         */
+        // let obj4 = {
+        //     name: "小刁",
+        //     say: function() {
+        //         console.log(11111111);
+        //     },
+        //     say2() {
+        //         console.log(444444);
+        //     }
+        // }
+        // obj4.say()
+        // obj4.say2()
+
+        /************************************************/
+
+        /**
+         * 属性表达式
+         */
+        let obj5 = {
+            age: 11,
+            ["em" + "ail"]: "zhangsan@qq.com"
+        }
+        obj5.name = "小刁"
+        Object.defineProperty(obj5, "sex", {
+            value: "F",
+            enumerable: "false",
+            configurable: "false",
+        })
+        obj5["hel" + "lo"] = "Hello World" //表达式
+        console.log("obj5:", obj5);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //定义一个人类 person2
+        class Person {
+
+            static location = "邯郸"
+
+            constructor(name, age, sex) {
+                //构造方法 实例化时自动调用
+                this.name = name;
+                this.age = age
+                this.sex = sex
+            }
+
+            say() {
+                console.log(this.name + "正在闻屁");
+            }
+        }
+
+        //声明一个类 Asian 继承 person
+        class Asian extends Person {
+
+            constructor(name, age, sex) {
+                super(name, age, sex)
+            }
+
+            cry() {
+                console.log(this.name + "正在吃屁");
+            }
+        }
+
+        //定义一个类 
+        class Chinese extends Asian {
+
+        }
+
+        let p1 = new Chinese("大肠", 20, "阴人")
+        console.log(p1);
+
+        p1.say()
+
+
+
+        // let p1 = new Asian("小刁", 0, "女")
+        // console.log(p1);
+
+        // p1.say()
+        // p1.cry()
+    </script>
+</body>
+
+</html>
