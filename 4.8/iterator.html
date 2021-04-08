@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [11, 22, 33, 99, 88, 77]
+
+        console.log(Array.prototype);
+
+        let it = arr[Symbol.iterator]()
+        console.log(it.next()); //11
+        console.log(it.next()); //22
+        console.log(it.next()); //33
+        console.log(it.next()); //99
+        console.log(it.next()); //88
+        console.log(it.next()); //77
+        console.log(33333333333333333);
+
+
+        // arr.forEach(function(v, k) {
+        //     console.log(k, v);
+        // })
+
+        // for (v of arr) {
+        //     console.log(v);
+        // }
+
+        let s1 = new Set(["aa", "cc", "vv"])
+        console.log(s1);
+
+        // let s1 = new Set(arr)
+        // console.log(s1);
+
+        for (v of s1) {
+            console.log(v);
+        }
+
+        //定义一个 map
+        const obj1 = {
+            name: "xiaodiao",
+            age: 22
+        }
+
+        const obj2 = {
+            name: "dachang",
+            age: 22
+        }
+
+        let m1 = new Map()
+        m1.set(obj1, "小刁");
+        m1.set(obj2, "大畅")
+        console.log(m1);
+
+        console.log(111111);
+    </script>
+</body>
+
+</html>

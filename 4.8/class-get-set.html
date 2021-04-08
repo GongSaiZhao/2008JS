@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //类的 get set方法
+
+        class A {
+            constructor(name = "noname", age = 0) {
+                this.name = name
+                this.age = age
+            }
+
+            //属性name 的访问器  get方法
+            get name() {
+                console.log("访问了name");
+            }
+
+            set name(v) {
+                console.log("name 的新值");
+            }
+
+        }
+        const p1 = new A("小刁", 19);
+        const p2 = new A("大肠", 20);
+        const p3 = new A();
+        console.log(p1);
+        console.log(p2);
+        console.log(p3);
+        p1.name
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //get set 方法  ： 对象的
+
+        const obj1 = {
+            name: "小刁",
+            age: 11
+        }
+
+        // console.log(obj1.name);
+
+
+        Object.defineProperty(obj1, "name", {
+
+                get: function() {
+                    return "访问了name属性"
+                },
+
+                set(v) {
+                    return v
+                }
+            })
+            // console.log(obj1.name);
+            // obj1.name = "大肠"
+            // console.log(1111);
+        console.log(obj1);
+    </script>
+</body>
+
+</html>
