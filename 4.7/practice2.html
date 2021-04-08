@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //字符串对象添加一个toCharArray的方法
+
+         
+
+        String.prototype.toCharArray = function() {
+            var arr = new Array();
+            for (var index = 0; index < this.length; index++) {
+                arr[index] = this.charAt(index);
+            }
+            return arr;
+
+             
+
+        }
+
+        //字符串对象添加reverse(翻转)的 方法
+        String.prototype.reverse = function() {
+            var arr = this.toCharArray();
+            arr.reverse();
+            return arr.join(" ");
+        }   
+        var str = "abcd小刁吃屁";   
+        var chaArr = str.toCharArray();   
+        console.log("数组的元素：" + chaArr.join(","));   
+
+        str = str.reverse();   
+        console.log("翻转后的字符串：" + str);
+    </script>
+</body>
+
+</html>

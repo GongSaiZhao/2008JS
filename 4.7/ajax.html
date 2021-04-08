@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1、实例化 XHR
+        let xhr = new XMLHttpRequest()
+
+        //2、监听状态
+        xhr.onreadyStatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log(xhr.responseText);
+                let json_str = xhr.responseText //接收服务器相应的数据
+                let obj = JSON.parse(json_str) //将Json字符串转为js对象
+                console.log(obj);
+            }
+        }
+
+        //3、打开链接
+        xhr.open("get", "http://localhost/4.7/test.php")
+
+
+        //4、发送请求
+        xhr.send()
+    </script>
+</body>
+
+</html>
