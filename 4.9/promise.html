@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+
+    <!--使用promise-->
+
+    <script>
+        const p = new Promise(function(resolve, reject) {
+            //第一次请求
+            $.ajax({
+                url: "http://vue.api.comcto.com/api/password1.php", //要请求的接口地址
+                type: "get", //请求方法  get  post
+                async: false,
+                success: function(data) { //请求成功之后的  处理函数
+                    console.log("第一位密码：", data);
+                    resolve(data) //异步操作成功是调用 resolve
+                }
+            })
+        }).then(function(da) {
+            // console.log("接受到上一步  resolve的数据");
+            console.log(da);
+
+            //第二次请求
+            $.ajax({
+                url: "http://vue.api.comcto.com/api/password2.php", //要请求的接口地址
+                type: "get", //请求方法  get  post
+                async: false,
+                success: function(data) { //请求成功之后的  处理函数
+                    console.log("第二位密码：", data);
+                }
+            }).then(function() {
+                $.ajax({
+                    url: "http://vue.api.comcto.com/api/password3.php", //要请求的接口地址
+                    type: "get", //请求方法  get  post
+                    async: false,
+                    success: function(data) { //请求成功之后的  处理函数
+                        console.log("第三位密码：", data);
+                    }
+                })
+            })
+        }).then(function() {
+            $.ajax({
+                url: "http://vue.api.comcto.com/api/password4.php", //要请求的接口地址
+                type: "get", //请求方法  get  post
+                async: false,
+                success: function(data) { //请求成功之后的  处理函数
+                    console.log("第四位密码：", data);
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
