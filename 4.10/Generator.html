@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj1 = {
+            name: "小刁",
+            age: 2,
+            sex: "Male"
+        }
+
+
+        console.log(Object.entries(obj1));
+        console.log(11111);
+
+        function* it() {
+            //获取 对象的所有属性名 类型为数组
+            // const keys = Object.keys(this)
+
+            //获取对象的键值对
+            const entries = Object.entries(this)
+
+            for (k of keys) {
+                yield v
+            }
+        }
+
+
+
+        // function* it() {
+        //     yield "1111"
+        //     yield "2222"
+        //     yield "3333"
+        // }
+
+
+        // let obj1 = {}
+        // console.log(obj1);
+        // console.log(Object.getPrototypeOf(obj1));
+        // obj1[Symbol.iterator] = it
+
+        // console.log(obj1);
+
+
+        // const proto = Object.getPrototypeOf(obj1)
+        // proto[Symbol.iterator] = it
+        // console.log(obj1);
+
+        // for (v of obj1) {
+        //     console.log(v);
+        // }
+
+
+        // console.log(Array.prototype);
+
+        //普通函数
+        // function Hello() {
+        //     console.log(111);
+        // }
+        // Hello(); //111
+
+
+        //生成器函数
+        // function* Helloo() {
+        //     yield "Hello",
+        //     yield "小刁儿子"
+        //     return "Es6"
+        // }
+        // const g1 = Helloo();
+        // console.log(g1.next()); //返回一个对象 包含 值 和 done（true|false
+        // console.log(g1.next());
+        // console.log(g1.next());
+    </script>
+</body>
+
+</html>
