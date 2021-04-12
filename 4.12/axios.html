@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="getList">Axios获取数据</button>
+        <ul>
+            <li v-for="itme in stu">
+                ID:{{itme.id}}-Name:{{itme.name}}-Sex{{itme.sex}}
+            </li>
+        </ul>
+    </div>
+    <script src="../vue.2.6.12.js"></script>
+    <script src="../axios.min.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                stu: [] //定义空数组 相当于默认值
+            },
+            methods: {
+                getList() { //button 绑定事件
+                    const self = this
+                    axios.get("http://vue.api.comcto.com/api/list.php").then(function(d) {
+                        console.log(d)
+                        self.stu = d.data //修改data中stu
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

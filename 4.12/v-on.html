@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <button>点击</button>
+        <button v-on:click="SB">点击2</button>
+    </div>
+    <script src="../vue.2.6.12.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            methods: {
+                SB() {
+                    alert(111)
+                }
+            }
+        })
+
+
+        // document.getElementsByTagName("button")[0].addEventListener("click", function() {
+        //     alert(111)
+        // })
+    </script>
+</body>
+
+</html>

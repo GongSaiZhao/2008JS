@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 3px solid black;
+        }
+        
+        .style {
+            background-color: aqua;
+        }
+        
+        .style2 {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <div v-bind:class="class2"></div>
+    </div>
+
+    <!-- <script>
+        const d = document.querySelector("#div2");
+        console.log(typeof d);
+
+        //给节点对象添加自定义属性
+        d.setAttribute("abc", "小刁吃屁")
+        console.log(d.getAttribute("id"))
+    </script> -->
+
+    <script src="../vue.2.6.12.js"></script>
+    <script>
+        let app = new Vue({
+            el: "#app", //容器ID  挂载点
+            data: {
+                msg: "小刁吃屁",
+                class2: {
+                    style: true,
+                    style2: false
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
