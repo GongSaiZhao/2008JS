@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>
+            Ask a yes/no question:
+            <input v-model="question">
+        </p>
+        <p>{{ answer }}</p>
+    </div>
+
+    <script src="../vue.2.6.12.js"></script>
+    <script src="../axios.min.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                question: "",
+                answer: "输入一个字母测试今天的运气...."
+            },
+            watch: {
+                question(nv, ol) {
+                    console.log(this);
+
+                    let self = this
+
+                    this.answer = "正在接收接口数据...."
+                        //接收远程接口的数据  异步执行
+                    axios.get("http://vue.api.comcto.com/api/password1.php").then(function(res) {
+
+
+                        console.log(this);
+                        console.log("接口返回数据：", res.data);
+                        if (res.data == 1) {
+                            self.answer = "大吉大利，小刁吃 “鸡” "
+                        } else {
+                            self.answer = "小刁倒霉"
+                        }
+                    })
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
